@@ -12,12 +12,18 @@ def koch(size, n):
 
 
 def main():
-    turtle.setup(800, 400)
+    turtle.setup(600, 600)
     turtle.penup()
-    turtle.goto(-300, -50)
+    turtle.goto(-200, 100)
     turtle.pendown()
     turtle.pensize(2)
-    koch(600, 4)
+    level = 2
+    # 如果不绘制科赫曲线，那么就是等边三角形的效果
+    koch(400, level)
+    turtle.right(120)
+    koch(400, level)
+    turtle.right(120)
+    koch(400, level)
     turtle.hideturtle()
     turtle.done()
 
