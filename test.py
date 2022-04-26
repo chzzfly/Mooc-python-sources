@@ -1,11 +1,15 @@
-count = 0
-while count < 3:
-    name = input()
-    password = input()
-    if name == 'Kate' and password == '666666':
-        print("登录成功！")
-        break
-    else:
-        count += 1
-        if count == 3:
-            print("3次用户名或者密码均有误！退出程序。")
+sum = 2
+for i in range(2, 101):
+    if i == 3:
+        sum += 3
+    if i == 5:
+        sum += 5
+    if i == 7:
+        sum += 7
+    if i % 2 != 0:
+        if i % 3 != 0:
+            if i % 5 != 0:
+                if i % 7 != 0:
+                    sum += i
+
+print(sum)
