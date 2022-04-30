@@ -1,4 +1,6 @@
 #CalStatisticsV1.py
+
+
 # 用户输入功能
 def getNum():
     nums = []
@@ -26,15 +28,16 @@ def dev(numbers, mean):
 
 
 # 求中位数
-def midum(numbers):
+def medium(numbers):
     sorted(numbers)
-
-    l = len(numbers)
-    if l % 2 != 0:
-        return numbers[l // 2]
+    size = len(numbers)
+    if size % 2 != 0:
+        return numbers[size // 2]
     else:
-        i = (numbers[l // 2] + numbers[len(numbers) // 2 - 1]) / 2
-        return i
+        med = (numbers[size // 2] + numbers[size // 2 - 1]) / 2
+        return med
 
 
-print(midum([1, 2, 3, 4]))
+n = getNum()
+m = mean(n)
+print("平均值：{}，方差：{:.2f}，中位数：{}。".format(m, dev(n, m), medium(n)))
