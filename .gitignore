@@ -1,5 +1,6 @@
 # some mine resources
 *.txt
+*.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
